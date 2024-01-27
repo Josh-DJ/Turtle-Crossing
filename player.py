@@ -6,7 +6,7 @@ FINISH_LINE_Y = 280
 
 class Player(Turtle):
 
-
+    # Create a turtle when initializing.
     def __init__(self):
         super().__init__()
         self.shape("turtle")
@@ -15,5 +15,10 @@ class Player(Turtle):
         self.goto(STARTING_POSITION)
         self.setheading(90)
 
+    # Moves turtle forward a certain distance.
     def move(self):
         self.forward(MOVE_DISTANCE)
+
+    # Reset to starting pos when player reaches finish line.
+    def reset_pos(self):
+        self.goto(STARTING_POSITION)
